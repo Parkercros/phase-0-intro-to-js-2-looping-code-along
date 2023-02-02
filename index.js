@@ -1,23 +1,16 @@
-const gifts = ["teddy bear", "drone", "doll"];
-
-function wrapGift(gift) {
-  console.log(`Wrapped ${gift} and added a bow!`);
+function writeCards (namesArray, event) {
+let thankYouCards = []
+for (let i = 0; i < namesArray.length; i++) {
+  thankYouCards.push(`Thank you, ${namesArray[i]}, for the wonderful ${event} gift!`)
 }
-
-for (let i = 0; i < gifts.length; i++) {
-  wrapGift(gifts[i]);
+return thankYouCards
 }
+ 
 
-function writeCards(names) {
-  let messages = [];
-  for (let name of names) {
-    messages.push(`Thank you, ${name}, for the wonderful surprise gift!`);
-  }
-  return messages;
+function countDown (startingNumber) {
+while (startingNumber > 0) {
+  console.log(startingNumber);
+  startingNumber -= 1;
 }
-
-function countDown(num) {
-  for (let i = num; i >= 0; i--) {
-    console.log(i);
-  }
+console.log(startingNumber);
 }
